@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #F5D248;
+    color: #623E00;
+    font-family: Satisfy, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem auto;
+}
+
+h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 2rem auto;
+}
+
+p, figcaption {
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem auto;
+}
+
+a {
+    color: #F74307;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    margin: 0px auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Header section */
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30rem;
+    border-bottom: 0.1rem solid white;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.invisible {
+    color: white;
+    text-decoration: none;
+    transition: 1s ease-out;
+}
+
+a:hover .invisible {
+    color: #F74307;
+}
+
+.header-content {
+    margin: auto;
+}
+
+.overlay::before {
+    content: " ";
+    z-index: 1;
+    position: absolute;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 27rem;
+    width: 100%;
+}
+
+.header-content .overlay {
+    position: relative;
+    height: 27rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://orlandoinformer.com/wp-content/uploads/2014/07/ollivanders-wand-shop-universal-studios-florida-8211-oi.jpg");
+}
+
+.header-content h1 {
+    font-size: 10rem;
+    font-family: Caveat, sans-serif;
+    text-align: center;
+    color: white;
+    text-shadow: 0.1rem 0.2rem black;
+    z-index: 2;
+}
+
+.header-content .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    height: 7rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background-color: white;
+}
+
+.header-content .navbar-link {
+    margin: 0 10rem;
+}
+
+@media only screen and (max-width: 425px) {
+    .header-content h1 {
+        font-size: 8rem;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .header-content .navbar {
+        height: 10rem;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 798px) {
+    .header-content .navbar-link {
+        margin: 0 5rem;
+    }
+}
+
+
+/* Top margin because of the header */
+main {
+    margin-top: 5rem;
+}
+
+
+/* Description section */
+.description {
+    text-align: center;
+    width: 50%;
+    margin: 10rem auto 5rem;
+    padding: 1rem 3rem 3rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.description p {
+    text-align: justify;
+}
+
+@media only screen and (max-width: 768px) {
+    .description {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .description {
+        width: 95%;
+    }
+}
+
+/* Products section */
+.products {
+    background-color: #FFE479;
+    padding: 2rem;
+}
+
+.cores {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 3rem;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.core-figure {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 30rem;
+    height: 30rem;
+    justify-content: center;
+    align-content: center;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.core-figure img {
+    height: 20rem;
+    width: 20rem;
+}
+
+#second-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 5rem auto;
+    justify-content: space-around;
+    align-content: center;
+    align-items: flex-start;
+}
+
+#wood-figure {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 50rem;
+    margin: auto;
+    padding: 3rem 0 1rem;
+    justify-content: center;
+    align-content: center;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+#products-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#about-products {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50rem;
+    height: 60rem;
+    padding: 0rem 5rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+#about-products p {
+    text-align: justify;
+}
+
+@media only screen and (max-width: 530px) {
+    #wood-figure, #about-products {
+        width: 90vw;
+    }
+
+    p, figcaption {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* Owner section */
+#owner {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 3rem;
+    margin: 5rem auto;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+@media only screen and (max-width: 530px) {
+    #owner {
+        width: 95%;
+    }
+}
+
+/* Contact section */
+.contact {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    background-color: #FFE479;
+}
+
+#contact-blocks {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 30rem;
+    margin: 0 auto 5rem;
+    column-gap: 2rem;
+}
+
+#contact-blocks div {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 3rem;
+}
+
+#contact-info {
+    background-image: url(https://m.media-amazon.com/images/I/61LbWBjSkOL._AC_SY355_.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+#contact-info p {
+    color: white;
+    font-size: 3rem;
+    z-index: 2;
+}
+
+#contact-info::before {
+    content: " ";
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    height: 30rem;
+    width: 100%;
+}
+
+#address {
+    position: relative;
+    width: 50%;
+    background-image: url(https://www.previewsworld.com/SiteImage/MainImage/STL155804.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: color 2s;
+}
+
+#address::before {
+    content: " ";
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    height: 30rem;
+    width: 100%;
+    transition: background-color 2s;
+}
+
+#address:hover {
+    color: white;
+}
+
+#address:hover::before {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#address p {
+    font-size: 3rem;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 1090px) {
+    #address p {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #contact-blocks {
+        flex-wrap: wrap;
+        row-gap: 2rem;
+        align-content: center;
+        height: 100rem;
+    }
+
+    #contact-blocks div {
+        width: 100%;
+        height: 50rem;
+    }
+
+    #contact-blocks p {
+        font-size: 5rem;
+    }
+
+    #contact-info::before, #address::before {
+        height: 50rem;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    #contact-blocks {
+        width: 95%;
+    }
+
+    #contact-blocks p {
+        font-size: 3.5rem;
+    }
+}
+
+
+/* Footer */
+footer {
+    padding: 2.5rem;
+}
+
+@media only screen and (max-width: 425px) {
+    #disclaimer {
+        text-align: justify;
+    }
+
+    footer p {
+        font-size: 1.5rem;
+    }
+}
